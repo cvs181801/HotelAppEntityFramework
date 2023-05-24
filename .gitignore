@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/HotelAppEF/wwwroot/lib/bootstrap/dist/css
+/HotelAppEF/wwwroot/lib/bootstrap/dist/js

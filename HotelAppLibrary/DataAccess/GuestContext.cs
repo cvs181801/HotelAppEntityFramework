@@ -16,5 +16,13 @@ namespace HotelAppLibrary.DataAccess
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<Room> Rooms { get; set; }
         public DbSet<RoomType> RoomTypes { get; set; }
+
+       /* protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Test");
+        }*/
     }
 }
+
+//setting up data access layer
+//how to inject the dependency into an angular front end ? ? 
