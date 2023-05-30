@@ -17,12 +17,13 @@ namespace HotelAppLibrary.DataAccess
         public DbSet<Room> Rooms { get; set; }
         public DbSet<RoomType> RoomTypes { get; set; }
 
-       /* protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Test");
-        }*/
+        /*var folder = Environment.SpecialFolder.LocalApplicationData;
+        var path = Environment.GetFolderPath(folder);
+        var DbPath = System.IO.Path.Join(path, "blogging.db");*/
     }
 }
 
 //setting up data access layer
+//models folder with models (back end to front end) (entities are back end to DB)
 //how to inject the dependency into an angular front end ? ? 
+//using asyncronous code in asp.net on the front end to help improve performance; other ways to improve performance
