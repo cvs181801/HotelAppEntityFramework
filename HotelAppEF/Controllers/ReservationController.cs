@@ -12,11 +12,11 @@ namespace HotelAppEF.Controllers
         //public IActionResult Index()
         //{
             [HttpGet]
-             public async Task<ActionResult<List<Resv>>> Get()
+             public async Task<ActionResult<List<ResvModel>>> Get()
             {
-                var stuff = new List<Resv>
+                var stuff = new List<ResvModel>
                 {
-                    new Resv
+                    new ResvModel
                     {
                         GuestId = 1,
                         FirstName = "Freak",

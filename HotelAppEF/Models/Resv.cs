@@ -1,6 +1,6 @@
 ﻿namespace HotelAppEF.Models
 {
-    public class Resv
+    public class ResvModel
     {
         public int GuestId { get; set; }
         public string FirstName { get; set; }

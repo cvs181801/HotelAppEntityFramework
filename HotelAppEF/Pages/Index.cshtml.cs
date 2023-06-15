@@ -1,9 +1,12 @@
 ﻿
-using HotelAppEF.Models;
+//using HotelAppEF.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-
+using HotelAppLibrary.Entities;
+using System.ComponentModel;
+using HotelAppEF.Models;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace HotelAppEF.Pages
 {
@@ -19,11 +22,19 @@ namespace HotelAppEF.Pages
             _guestContext = guestContext;
         }
 
-        public List<Guest> Guests { get; set; }
+        public IList<Guest> Guests { get; set; }
 
-        public async void OnGetAsync()
+
+
+        /*public async Task<Guest> OnGetAsync()
         {
             Guests = await _guestContext.Guests.ToListAsync();
+            return (Guest)Guests; ///throws exception: Unsupported handler method return type 'System.Threading.Tasks.Task`1[HotelAppLibrary.Entities.Guest]'.
+        }*/
+
+        public void OnGet()
+        {
+            Guests = _guestContext.Guests.ToList();
         }
     }
 }
